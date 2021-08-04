@@ -20,7 +20,7 @@ export const ReturnHome = styled.div`
 `;
 
 export const Content = styled.div`
-
+  border-radius: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -30,7 +30,7 @@ export const Content = styled.div`
 
   h3{
     color: white;
-    margin-top: 5px;
+    margin-top: 20px;
   }
 `;
 
@@ -77,7 +77,16 @@ export const EloSummoner = styled.img`
 `;
 
 export const SummonerInfo = styled.div`
-  color: #fff;
+  a {
+    
+    color: #fff;
+    transition-duration: 0.4s;
+  }
+
+  a:hover{
+    color: #BCBCBC;
+  }
+    
 `;
 
 export const FooterContent = styled.div`
@@ -127,6 +136,7 @@ export const LossesLabel = styled.span`
 
 export const Champions = styled.div`
   display: flex;
+  
   
   a{
     margin:  5px;

@@ -128,16 +128,16 @@ function Summoner({ match, history }) {
           <h3>Top Mastery Champions</h3>
           <Champions>
 
-          
+            
               <a 
-              href={`https://www.leagueofgraphs.com/pt/champions/stats/${summoner.champion1Name}`}
+              href={`/champion/${summoner.summonerId}/${summoner.champion1Name}/${summoner.champion1Id}`}
               alt="champion image"
-              target ="_blank">
+              >
               <img src={summoner.champion1}/>
               </a>
             
           <a 
-          href={`https://www.leagueofgraphs.com/pt/champions/stats/${summoner.champion2Name}`}
+          href={`/champion/${summoner.summonerId}/${summoner.champion2Name}/${summoner.champion2Id}`}
           alt="champion image"
           target ="_blank">
           <img src={summoner.champion2}/>
@@ -145,7 +145,7 @@ function Summoner({ match, history }) {
           </a>
          
           <a 
-          href={`https://www.leagueofgraphs.com/pt/champions/stats/${summoner.champion3Name}`}
+          href={`/champion/${summoner.summonerId}/${summoner.champion3Name}/${summoner.champion3Id}`}
           alt="champion image"
           target ="_blank">
             <img  src={summoner.champion3}/>
@@ -156,7 +156,7 @@ function Summoner({ match, history }) {
         </Content>
         <ReturnHome onClick={() => history.push('/')}>
           <FaAngleLeft size={30} color="#FFF" />
-          <span>Voltar</span>
+          <span>backend</span>
        </ReturnHome>
         </>)
         :
