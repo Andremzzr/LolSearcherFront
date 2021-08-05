@@ -36,7 +36,7 @@ function Summoner({ match, history }) {
   const [summoner, setSummoner] = useState(Object);
   const [loading, setLoading] = useState(0);
 
-  console.log(match.params.id);
+  
   useEffect(() => {
     async function loadData() {
       setLoading(1);
@@ -119,8 +119,21 @@ function Summoner({ match, history }) {
               </LossesLabel>
             </div>
             <CircleDiv>
+              
               <label>
-                <strong>{summoner.winRate}%</strong>
+                {
+                  
+                  parseFloat(summoner.winRate) > 55.0 ?
+                  (<strong className="green">
+                    {summoner.winRate}
+                    %</strong>)
+
+                    :
+                   ( <strong className="red">
+                    {summoner.winRate}
+                    %</strong>)
+                }
+                
               </label>
               <label>WIN RATE</label>
             </CircleDiv>
@@ -133,14 +146,15 @@ function Summoner({ match, history }) {
               href={`/champion/${summoner.summonerId}/${summoner.champion1Name}/${summoner.champion1Id}`}
               alt="champion image"
               >
-              <img src={summoner.champion1}/>
+              <img src={summoner.champion1} alt="champion Image"/>
               </a>
             
           <a 
           href={`/champion/${summoner.summonerId}/${summoner.champion2Name}/${summoner.champion2Id}`}
           alt="champion image"
           target ="_blank">
-          <img src={summoner.champion2}/>
+          <img src={summoner.champion2}
+          alt="champion Image"/>
 
           </a>
          
@@ -148,7 +162,8 @@ function Summoner({ match, history }) {
           href={`/champion/${summoner.summonerId}/${summoner.champion3Name}/${summoner.champion3Id}`}
           alt="champion image"
           target ="_blank">
-            <img  src={summoner.champion3}/>
+            <img  src={summoner.champion3}
+            alt="champion Image"/>
 
           </a>
           </Champions>
@@ -156,7 +171,7 @@ function Summoner({ match, history }) {
         </Content>
         <ReturnHome onClick={() => history.push('/')}>
           <FaAngleLeft size={30} color="#FFF" />
-          <span>backend</span>
+          <span>back</span>
        </ReturnHome>
         </>)
         :

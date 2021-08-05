@@ -2,15 +2,21 @@ import React from 'react';
 import { useEffect, useState } from 'react';
 import { Spinner } from 'react-bootstrap';
 import api from "../../services/backend";
+import { FaAngleLeft } from 'react-icons/fa';
 
 import {
-  Container
+  Container,
+  Content,
+  Header,
+  ReturnHome
 } from './styles';
 
 const Match = ({match, history}) => {
     
     const [summoner, setSummoner] = useState(Object);
     const [loading, setLoading] = useState(0);
+
+    
 
     useEffect(() => {
         async function loadData() {
@@ -25,6 +31,7 @@ const Match = ({match, history}) => {
     
           if (res && res.data) {
             setSummoner(res.data);
+            
           }
           setLoading(0);
         }
@@ -37,9 +44,36 @@ const Match = ({match, history}) => {
         {
         !loading?
           <Container>
-            <h1>
-            {summoner.kills}/{summoner.deaths}/{summoner.assists}
-          </h1>
+            <Content>
+              <Header>
+              <img src={summoner.champion}></img>
+            <h2>
+             {`KDA: ${summoner.kills}/${summoner.deaths}/${summoner.assists}`}
+            </h2>
+              </Header>
+            
+            Last Match Played with {match.params.championName}
+            {
+              summoner.win == false ?
+              <h2>
+                Loose
+              </h2> :
+              <h1> 
+                Win
+              </h1>
+            }
+            
+            <div className="spells">
+              <img src={summoner.spell1Url}></img>
+              <img src={summoner.spell2Url}></img>
+            </div>
+
+            </Content>
+            <ReturnHome onClick={() => history.push('/')}>
+          <FaAngleLeft size={30} color="#FFF" />
+          <span>back to home</span>
+       </ReturnHome>
+          
           </Container>
         :
         (

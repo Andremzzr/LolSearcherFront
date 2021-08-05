@@ -123,6 +123,16 @@ export const CircleDiv = styled.div`
   }
   label strong {
     font-size: 20px;
+    
+  }
+
+  label strong .green {
+    color: green;
+    
+  }
+  label strong .red{
+    color: red;
+    
   }
 `;
 
