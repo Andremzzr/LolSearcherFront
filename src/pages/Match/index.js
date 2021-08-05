@@ -45,6 +45,7 @@ const Match = ({match, history}) => {
         !loading?
           <Container>
             <Content>
+            Last Match Played with {match.params.championName}  
               <Header>
               <img src={summoner.champion}></img>
             <h2>
@@ -52,7 +53,7 @@ const Match = ({match, history}) => {
             </h2>
               </Header>
             
-            Last Match Played with {match.params.championName}
+           
             {
               summoner.win == false ?
               <h2>
@@ -63,6 +64,7 @@ const Match = ({match, history}) => {
               </h1>
             }
             
+            <div className="spells-title">Spells:</div>
             <div className="spells">
               <img src={summoner.spell1Url}></img>
               <img src={summoner.spell2Url}></img>

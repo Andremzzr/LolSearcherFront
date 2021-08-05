@@ -152,7 +152,7 @@ function Summoner({ match, history }) {
           <a 
           href={`/champion/${summoner.summonerId}/${summoner.champion2Name}/${summoner.champion2Id}`}
           alt="champion image"
-          target ="_blank">
+         >
           <img src={summoner.champion2}
           alt="champion Image"/>
 
@@ -161,7 +161,7 @@ function Summoner({ match, history }) {
           <a 
           href={`/champion/${summoner.summonerId}/${summoner.champion3Name}/${summoner.champion3Id}`}
           alt="champion image"
-          target ="_blank">
+         >
             <img  src={summoner.champion3}
             alt="champion Image"/>
 

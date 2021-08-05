@@ -23,6 +23,13 @@ export const Content = styled.div`
   color: white;
   background: rgba(255, 255, 255, 0.15);
 
+
+  .spells-title{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center
+  }
   img {
     width: 100px;
     heigth : 100px;
@@ -34,13 +41,17 @@ export const Content = styled.div`
     margin:10px;
     border-radius: 5px
   }
+  h2 {
+    margin-top: 5px;
+  }
 `;
 
 export const Header = styled.div`
   width: 100%;
 
   img {
-    margin-bottom: 5px
+    margin-bottom: 5px;
+    margin-top: 15px;
   }
 `;
 
