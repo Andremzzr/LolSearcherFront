@@ -9,7 +9,7 @@ export const Container = styled.div`
   height: 100vh;
 
   h1{
-    color: white;
+    color: black;
   }
 `;
 
@@ -20,8 +20,9 @@ export const Content = styled.div`
   justify-content: center;
   flex-direction: column;
   padding: 30px;
-  color: white;
-  background: rgba(255, 255, 255, 0.15);
+  color: black;
+  background: #F7F7F7;
+  box-shadow: 0 0 1em rgb(168, 168, 168);
 
 
   .spells-title{
@@ -61,6 +62,10 @@ export const ReturnHome = styled.div`
   margin-top: 20px;
   span{
     size: 24px;
-    color: #fff;
+    color: black;
   }
+`;
+
+export const Items = styled.div`
+  
 `;

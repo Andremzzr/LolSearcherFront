@@ -8,9 +8,9 @@ export const Container = styled.div`
   height: 100vh;
 
   h1 {
-    color: #fff;
+    color: #black;
     strong {
-      color: #edc988;
+      color: #A73AFC;
     }
   }
 
@@ -24,7 +24,7 @@ export const Container = styled.div`
 
     input {
       padding: 10px;
-      border: none;
+      border: 0.1px solid black;
       border-radius: 4px;
       text-align: center;
       width: 60%;
@@ -72,7 +72,7 @@ export const Header = styled.div`
   }
   span {
     font-size: 48px;
-    color: #edc988;
+    color: #A73AFC;
   }
 
   @media(max-width: 414px){
@@ -85,8 +85,8 @@ export const Header = styled.div`
 
 export const Img = styled.img`
   
-  width: 627px;
-  height: 400px;
+  width: 187px;
+  height: 300px;
 
   @media(max-width: 414px){
       width: 360px;

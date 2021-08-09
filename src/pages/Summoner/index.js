@@ -170,13 +170,13 @@ function Summoner({ match, history }) {
           
         </Content>
         <ReturnHome onClick={() => history.push('/')}>
-          <FaAngleLeft size={30} color="#FFF" />
+          <FaAngleLeft size={30} color="black" />
           <span>back</span>
        </ReturnHome>
         </>)
         :
         (
-          <Spinner animation="border" variant="light" />
+          <Spinner animation="border"   />
         )
       }
     </Container>

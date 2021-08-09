@@ -8,7 +8,8 @@ import {
   Container,
   Content,
   Header,
-  ReturnHome
+  ReturnHome,
+  Items
 } from './styles';
 
 const Match = ({match, history}) => {
@@ -64,6 +65,11 @@ const Match = ({match, history}) => {
               </h1>
             }
             
+            <Items>
+              
+            </Items>
+
+
             <div className="spells-title">Spells:</div>
             <div className="spells">
               <img src={summoner.spell1Url}></img>
@@ -72,7 +78,7 @@ const Match = ({match, history}) => {
 
             </Content>
             <ReturnHome onClick={() => history.push('/')}>
-          <FaAngleLeft size={30} color="#FFF" />
+          <FaAngleLeft size={30} color="black" />
           <span>back to home</span>
        </ReturnHome>
           
@@ -80,7 +86,7 @@ const Match = ({match, history}) => {
         :
         (
           <Container>
-               <Spinner animation="border" variant="light" />
+               <Spinner animation="border"  />
           </Container>
          
         )

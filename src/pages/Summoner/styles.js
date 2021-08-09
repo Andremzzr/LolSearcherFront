@@ -15,21 +15,22 @@ export const ReturnHome = styled.div`
   margin-top: 20px;
   span{
     size: 24px;
-    color: #fff;
+    color: black;
   }
 `;
 
 export const Content = styled.div`
+  box-shadow: 0 0 1em rgb(168, 168, 168);
   border-radius: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background: rgba(255, 255, 255, 0.15);
+  background: #F7F7F7;
   padding: 20px;
 
   h3{
-    color: white;
+    color: black;
     margin-top: 20px;
   }
 `;
@@ -43,7 +44,7 @@ export const HeaderContent = styled.div`
     font-size: 32px;
   }
   padding-bottom: 20px;
-  border-bottom: 2px solid #fff;
+  border-bottom: 2px solid #F7F7F7;
 
   @media(max-width: 414px){
       h2 {
@@ -79,7 +80,7 @@ export const EloSummoner = styled.img`
 export const SummonerInfo = styled.div`
   a {
     
-    color: #fff;
+    color: black;
     transition-duration: 0.4s;
   }
 
@@ -101,7 +102,7 @@ export const FooterContent = styled.div`
     span {
       font-size: 32px;
       label {
-        color: #fff;
+        color: black;
       }
     }
   }
@@ -113,11 +114,11 @@ export const CircleDiv = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  color: #fff;
+  color: black;
   height: 100px;
   width: 100px;
   border-radius: 50%;
-  border: 2px solid #fff;
+  border: 2px solid black;
   label {
     font-size: 14px;
   }
@@ -156,3 +157,4 @@ export const Champions = styled.div`
     border: 0.4px solid white;
   }
 `;
+
